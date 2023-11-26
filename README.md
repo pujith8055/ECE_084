@@ -10,8 +10,9 @@
 # SMTP Send-only Mail setup
 - install **"postfix"** and **"mailutils"**.
 - go to **"/etc/postfix/"** and edit **"main.cf"**.
-- add or change these lines at the bottom.
+- add or change these lines at the bottom of the **"main.cd"** file.
 
+```
 relayhost = [smtp.gmail.com]:587
 smtp_sasl_auth_enable= yes
 smtp_sasl_password_maps= hash:/etc/postfix/sasl_passwd
@@ -22,6 +23,7 @@ mailbox_size_limit = 0
 recipient_delimiter = +
 inet_interfaces = loopback-only
 inet_protocols = all
+```
 
 - now go to **"google account > security > 2-step verification > App passwords"** create a new app and write down the password.
 - now create a new file named **"sasl_passwd"** in **"/etc/postfix/"**.
