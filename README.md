@@ -1,5 +1,5 @@
 # ECE_084
-Linux bash scripting
+**Todo list and Reminder System**
 
 # SETUP
 - Create three files in the same directory (Tasks, Reminders, Done).
